@@ -9,14 +9,13 @@
 import Foundation
 import UIKit
 
-
 extension UIView{
     
     func removeAllChildenView(){
         
         if self.subviews.count == 0 {return}
         
-        for (index,subView) in enumerate(self.subviews){
+        for (_,subView) in self.subviews.enumerate(){
             subView.removeFromSuperview()
         }
     }
